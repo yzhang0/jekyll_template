@@ -1,0 +1,90 @@
+---
+permalink: demoMapbox.html
+---
+
+<!-- <!DOCTYPE html>
+
+<head>
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js"></script>  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css" rel="stylesheet" />  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <script>
+mapboxgl.accessToken = "pk.eyJ1IjoieXVhbnoyMjk5IiwiYSI6ImNqZ3gzdDFlcTFqZDMyd216OXZnMzNhdXoifQ.-i3J6xqi-dhTgwfZ7nUrLw";
+
+/* Map: This represents the map on the page. */
+var map = new mapboxgl.Map({
+  container: "map",
+  style: "mapbox://styles/mapbox/streets-v10",
+  zoom:12,
+  center: [-74.00600,40.71280]
+});
+
+map.on("load", function () {
+  /* Image: An image is loaded and added to the map. */
+  map.loadImage("img/foodIcon.png", function(error, image) {
+      if (error) throw error;
+      map.addImage("custom-marker", image);
+      /* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
+      map.addLayer({
+        id: "markers",
+        type: "symbol",
+        /* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
+        source: {
+          type: "geojson",
+          data: {
+            type: "FeatureCollection",
+            features:[{"type":"Feature","geometry":{"type":"Point","coordinates":["-73.989737","40.7221952"]}}]}
+        },
+        layout: {
+          "icon-image": "custom-marker",
+        }
+      });
+    });
+});
+  </script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title></title>
+  <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+  <style>
+    body {
+      margin: 0;
+      padding :0;
+    }
+    .map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<div id='map-leaflet' class='map'> </div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoieXVhbnoyMjk5IiwiYSI6ImNqZ3gzdDFlcTFqZDMyd216OXZnMzNhdXoifQ.-i3J6xqi-dhTgwfZ7nUrLw';
+var mapLeaflet = L.mapbox.map('map-leaflet', 'mapbox.streets')
+  .setView([40.71280, -74.00600], 12);
+
+L.marker([40.7221952, -73.989737]).addTo(mapLeaflet);
+L.marker([40.7170223, -73.9954912]).addTo(mapLeaflet);
+
+mapLeaflet.scrollWheelZoom.disable();
+</script>
+</body>
+</html>
