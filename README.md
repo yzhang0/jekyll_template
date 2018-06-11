@@ -1,11 +1,7 @@
-### Gitpage for Journee
+# Github repo for template webpage
 
-This is the github template for our project Journee, the perfect interactive and
- personalized map for people to explore the world more efficiently.
-
-## This repo has been created to make a simple template for our website leveraging the
-benefits of Bootstrap and Jekyll. Most HTML/CSS template are taken or highly
-inspired by the following links:
+This repo has been created as a template for websites made with Bootstrap and Jekyll. Feel free to use it as a stepping stone for your own websites.
+Most HTML/CSS code are taken or highly inspired by the following tutorials:
 
 * https://bootstrapmade.com/demo/Regna/
 * https://demo.tutorialzine.com/2014/04/creative-company-bootstrap-template
